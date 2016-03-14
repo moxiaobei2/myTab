@@ -1,0 +1,11 @@
+1.在做tab_navigator时一定要考虑到模块与模块跳转的问题，此时在index的时候就要引用router,并且在routerMap时绑定this对象，
+然后把this的方法和navigator传给子模块，然后由子模块调用父模块方法
+eg:index.android.js line:29 40 45行
+2.关于动态生成子对象时会出现component存在的情况下怎么办，此时可以把他绑定的值先修改成不符合条件的，然后再重新设置值，
+这样就解决了这个问题
+eg:searchScreen.js:line 278 279
+这个模块还作用了drawer的使用，content的动态引用很重要 line:134 154
+
+还未解决的问题：
+1.array:key问题:已完成，要设置每个map view里面的key值，forEach设置一个Key，再根据把key给到 dom (一奇葩)
+2.图片加载的问题 onLoad
